@@ -2,7 +2,7 @@ import { GoogleGenAI } from "@google/genai";
 import { AppMode } from "../types";
 import { ANCURE_SYSTEM_PROMPT } from "../constants";
 
-// Initialize Gemini Client
+// Initialize Ancure AI Client
 // We assume process.env.API_KEY is available in the environment.
 const ai = new GoogleGenAI({ apiKey: process.env.API_KEY || '' });
 
@@ -38,7 +38,7 @@ export const analyzeMedicalDocument = async (file: File, mode: AppMode): Promise
     `;
 
     const response = await ai.models.generateContent({
-      model: 'gemini-2.0-flash', // Using 2.0 Flash as it offers good multimodal performance and speed
+      model: 'gemini-2.0-flash', // Using Ancure AI high-performance model
       contents: {
         parts: [
           {
@@ -61,7 +61,7 @@ export const analyzeMedicalDocument = async (file: File, mode: AppMode): Promise
     return response.text || "I could not generate a response. Please try again.";
 
   } catch (error: any) {
-    console.error("Gemini API Error:", error);
+    console.error("Ancure AI Service Error:", error);
     if (error.message?.includes("API_KEY")) {
       throw new Error("Invalid or missing API Key.");
     }

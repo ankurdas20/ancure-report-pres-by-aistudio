@@ -1,6 +1,6 @@
 {
   "name": "Ancure AI Decoder",
-  "description": "An intelligent medical report and prescription decoder powered by Ancure Health and Gemini AI. Upload your medical documents for an instant educational explanation.",
+  "description": "An intelligent medical report and prescription decoder powered by Ancure Health. Upload your medical documents for an instant educational explanation.",
   "requestFramePermissions": [
     "camera"
   ]
