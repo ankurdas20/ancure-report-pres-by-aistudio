@@ -3,7 +3,8 @@ import { AppMode, Language, AnalysisResponse } from "../types";
 import { ANCURE_SYSTEM_PROMPT } from "../constants";
 
 // Initialize Ancure AI Client
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY || '' });
+// The API key must be obtained exclusively from the environment variable process.env.API_KEY
+const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
 
 const fileToPart = (file: File): Promise<string> => {
   return new Promise((resolve, reject) => {
