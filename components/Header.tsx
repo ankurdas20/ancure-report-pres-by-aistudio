@@ -7,7 +7,7 @@ const Header: React.FC = () => {
       <div className="max-w-3xl mx-auto px-4 py-4 flex items-center justify-between">
         <div className="flex items-center">
           <img
-            src="/logo.png"
+            src="/android-chrome-192x192.png"
             alt="Ancure Health"
             style={{ height: "36px", marginRight: "8px" }}
           />
